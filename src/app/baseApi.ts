@@ -1,34 +1,27 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { handleError } from 'common/utils';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { handleError } from "common/utils"
 
 export const baseApi = createApi({
-  reducerPath: 'todolistsApi',
+  reducerPath: "todolistsApi",
 
   baseQuery: async (args, api, extraOptions) => {
-    const response = await fetch('https://social-network.samuraijs.com/api/1.1/' + args.url, {
-      method: args.method || 'GET',  
-      headers: {
-        'API-KEY': 'd9bbcdc0-0dbd-4e98-ab2c-6652c2ba0fb0',
-        'Authorization': `Bearer ${localStorage.getItem('sn-token')}`, 
-        'Content-Type': 'application/json',  
+    const result = await fetchBaseQuery({
+      baseUrl: 'https://social-network.samuraijs.com/api/1.1/',
+      credentials: 'include',
+      prepareHeaders: (headers) => {
+        headers.set('API-KEY', '00a6a071-8c92-43aa-847a-13b3b55569f0');
+        const token = localStorage.getItem('sn-token');
+        if (token) {
+          headers.set('Authorization', `Bearer ${token}`);
+        }
+        return headers;
       },
-      credentials: 'include',  
-      body: args.body ? JSON.stringify(args.body) : undefined,  
-    });
+    })(args, api, extraOptions)
 
-    // Ошибка если запрос не успешный
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
+    handleError(api, result)
 
-    // Преобразуем ответ в JSON
-    const jsonResponse = await response.json();
-
-    // Возвращаем результат в формате, который ожидает fetchBaseQuery
-    return { data: jsonResponse };
+    return result
   },
-
   endpoints: () => ({}),
-  tagTypes: ['Todolist', 'Task'],
-});
-
+  tagTypes: ["Todolist", "Task"],
+})
