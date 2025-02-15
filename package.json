@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ArtemRubtsov.github.io/Planify",
   "name": "1-lesson",
   "jest": {
     "moduleNameMapper": {
@@ -22,6 +23,7 @@
     "@types/react-dom": "^18.2.18",
     "@types/uuid": "^9.0.8",
     "axios": "^1.7.2",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.52.1",
@@ -38,7 +40,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
