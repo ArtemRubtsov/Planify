@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Planify/static/css/main.42edea82.css",
-    "main.js": "/Planify/static/js/main.10a7ccd1.js",
+    "main.js": "/Planify/static/js/main.4cf7b63e.js",
     "index.html": "/Planify/index.html",
     "main.42edea82.css.map": "/Planify/static/css/main.42edea82.css.map",
-    "main.10a7ccd1.js.map": "/Planify/static/js/main.10a7ccd1.js.map"
+    "main.4cf7b63e.js.map": "/Planify/static/js/main.4cf7b63e.js.map"
   },
   "entrypoints": [
     "static/css/main.42edea82.css",
-    "static/js/main.10a7ccd1.js"
+    "static/js/main.4cf7b63e.js"
   ]
 }
