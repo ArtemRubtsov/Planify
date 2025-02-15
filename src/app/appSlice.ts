@@ -3,7 +3,6 @@ import { tasksApi } from "../features/todolists/api/tasksApi"
 import { todolistsApi } from "../features/todolists/api/todolistsApi"
 
 export type ThemeMode = "dark" | "light"
-// export type ThemeMode = "#E8E2D9" | "#E8E2D9"
 export type RequestStatus = "idle" | "loading" | "succeeded" | "failed"
 
 export const appSlice = createSlice({
