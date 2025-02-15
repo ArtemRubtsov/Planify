@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Planify/static/css/main.42edea82.css",
+    "main.js": "/Planify/static/js/main.5195f755.js",
+    "index.html": "/Planify/index.html",
+    "main.42edea82.css.map": "/Planify/static/css/main.42edea82.css.map",
+    "main.5195f755.js.map": "/Planify/static/js/main.5195f755.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42edea82.css",
+    "static/js/main.5195f755.js"
+  ]
+}
