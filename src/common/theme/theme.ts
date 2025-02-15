@@ -6,7 +6,7 @@ export const getTheme = (themeMode: ThemeMode) => {
     palette: {
       mode: themeMode === "light" ? "light" : "dark",
       primary: {
-        main: "#b2dfdb",
+        main: "#FF949D",
       },
       secondary: {
         light: '#ff7961',

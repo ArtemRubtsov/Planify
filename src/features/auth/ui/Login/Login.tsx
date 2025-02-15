@@ -15,6 +15,8 @@ import { selectIsLoggedIn, selectThemeMode, setIsLoggedIn } from "../../../../ap
 import { useLoginMutation } from "../../api/authAPI"
 import { LoginArgs } from "../../api/authAPI.types"
 import s from "./Login.module.css"
+import LoginIcon from '@mui/icons-material/Login';
+
 
 export const Login = () => {
   const themeMode = useAppSelector(selectThemeMode)
@@ -114,6 +116,7 @@ export const Login = () => {
               />
               <Button type={"submit"} variant={"contained"} color={"primary"}>
                 Login
+                <LoginIcon />
               </Button>
             </FormGroup>
           </form>

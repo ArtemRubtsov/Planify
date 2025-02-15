@@ -1,13 +1,10 @@
 import { AddItemForm } from "common/components"
 import { useAddTaskMutation } from "../../../api/tasksApi"
 import { DomainTodolist } from "../../../lib/types/types"
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
 import { FilterTasksButtons } from "./FilterTasksButtons/FilterTasksButtons"
 import { Tasks } from "./Tasks/Tasks"
 import { TodolistTitle } from "./TodolistTitle/TodolistTitle"
-import { Accordion, AccordionActions, AccordionDetails, AccordionSummary, Box } from "@mui/material"
-import KeyboardDoubleArrowDownSharpIcon from '@mui/icons-material/KeyboardDoubleArrowDownSharp';
+import { Accordion, AccordionSummary, Box } from "@mui/material"
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 
 type Props = {

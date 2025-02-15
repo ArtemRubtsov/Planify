@@ -4,4 +4,8 @@ export const getListItemSx = (isDone: boolean): SxProps => ({
   p: 0,
   justifyContent: "space-between",
   opacity: isDone ? 0.5 : 1,
+  maxWidth: '300px',
+  borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+  borderRadius: '30px',
+  marginBottom: '10px'
 })

@@ -1,5 +1,6 @@
 import { ChangeEvent, useState } from "react"
 import TextField from "@mui/material/TextField"
+import { Typography } from "@mui/material"
 
 type Props = {
   value: string
@@ -39,7 +40,9 @@ export const EditableSpan = ({ value, onChange, disabled = false }: Props) => {
           autoFocus
         />
       ) : (
-        <span onDoubleClick={activateEditModeHandler}>{value}</span>
+        <Typography variant='h6' sx={{padding: '5px', marginRight: '10px', whiteSpace: 'pre-line', wordBreak: 'break-word'}} onDoubleClick={activateEditModeHandler}>
+          {value}
+        </Typography>
       )}
     </>
   )
