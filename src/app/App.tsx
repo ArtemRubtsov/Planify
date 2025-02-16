@@ -43,7 +43,7 @@ export const App = () => {
           <CircularProgress size={150} thickness={3} />
         </div>
       )}
-      <ErrorSnackbar />
+      {/* <ErrorSnackbar /> */}
     </ThemeProvider>
   )
 }
