@@ -28,26 +28,3 @@ export const router = createHashRouter([
     ],
   },
 ])
-
-// export const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App />,
-//     children: [
-//       {
-//         path: "/",
-//         element: <Main />,
-//       },
-//       {
-//         path: Path.Login,
-//         element: <Login />,
-//       },
-//       {
-//         path: "*",
-//         element: <Page404 />,
-//       },
-//     ],
-//   },
-// ],
-// { basename: "/Planify" }
-// )
